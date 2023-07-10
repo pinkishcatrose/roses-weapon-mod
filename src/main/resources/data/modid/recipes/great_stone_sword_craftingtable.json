@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "/"
+    ],
+    "key": {
+        "#": {
+            "item": "rose:compressed_cobblestone"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "rose:great_stone_sword",
+        "count": 1
+    }
+}

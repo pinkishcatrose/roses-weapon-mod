@@ -1,0 +1,24 @@
+{
+  "compressed.material.tool.ingredient": "Useful for storage, and crafting heavy weapons.",
+
+  "item.rose.compressed_cobblestone": "Compressed Cobblestone",
+  "item.rose.compressed_iron": "Compressed Iron",
+  "item.rose.compressed_diamond": "Compressed Diamond",
+
+  "item.rose.great_wooden_sword": "Great Wooden Sword",
+  "item.rose.great_stone_sword": "Great Stone Sword",
+  "item.rose.great_iron_sword": "Great Iron Sword",
+  "item.rose.great_diamond_sword": "Great Diamond Sword",
+  "item.rose.great_netherite_sword": "Great Netherite Sword",
+
+
+  "item.rose.knife_wooden": "Wooden Knife",
+  "item.rose.knife_stone": "Stone Knife",
+  "item.rose.knife_iron": "Iron Knife",
+  "item.rose.knife_diamond": "Diamond Knife",
+  "item.rose.knife_netherite": "Netherite Knife",
+
+  "item.rose.infected_heart": "Infected Heart",
+  "item.rose.cured_heart": "Cured Heart",
+  "item.rose.stuffed_cured_heart": "Stuffed Cured Heart"
+}

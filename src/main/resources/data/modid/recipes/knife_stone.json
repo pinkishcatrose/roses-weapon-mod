@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "/"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:cobblestone"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "rose:knife_stone",
+        "count": 1
+    }
+}

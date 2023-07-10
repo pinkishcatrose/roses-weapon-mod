@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "/"
+  ],
+  "key": {
+    "#": {
+      "item": "rose:compressed_iron"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "rose:great_iron_sword",
+    "count": 1
+  }
+}

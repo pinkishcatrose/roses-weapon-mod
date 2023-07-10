@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "rose:infected_heart"
+    },
+    "result": "rose:cured_heart",
+    "experience": 0.1,
+    "cookingtime": 100
+}
