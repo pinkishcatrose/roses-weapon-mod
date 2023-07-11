@@ -7,6 +7,8 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.loot.LootPool;
@@ -32,9 +34,13 @@ public class main implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     ///items
     // Gas Masks
-    public static final Item DEFAULT_GAS_MASK =
-            Registry.register(Registries.ITEM, new Identifier(MOD_ID, "gas_mask_default"),
-                    new gasmask(new FabricItemSettings()));
+    public static final Block GAS_MASK_DEFAULT  = new gasmaskblock(FabricBlockSettings.create().strength(4.0f));
+
+//    public static final Item DEFAULT_GAS_MASK =
+//        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "gas_mask_default"),
+//            new gasmask(new FabricItemSettings()));
+
+
     //Compressed Cobblestone
     public static final Item COMPRESSED_COBBLESTONE =
             Registry.register(Registries.ITEM, new Identifier(MOD_ID, "compressed_cobblestone"),
@@ -80,6 +86,11 @@ public class main implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        /// Register Gas Masks
+        //Default Gas Mask
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "gas_mask_default"), GAS_MASK_DEFAULT);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "gas_mask_default"), new gasmaskitem(GAS_MASK_DEFAULT, new FabricItemSettings()));
+
         /// Add infected heart to zombie entity
             LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
                 if (source.isBuiltin() && INFECTED_HEART_LOOT_TABLE0.equals(id)) {
@@ -118,9 +129,9 @@ public class main implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "knife_diamond"), KNIFE_DIAMOND);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "great_netherite_sword"), GREAT_NETHERITE_SWORD);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "knife_netherite"), KNIFE_NETHERITE);
-        LOGGER.info("");
+        LOGGER.info("---------");
         LOGGER.info("Loading Rose's Weapons and Items");
         LOGGER.info("NOTE: Its best to use this mod with the Infected Datapack, as some of the items added by this mod are made specifically for it.");
-        LOGGER.info("");
+        LOGGER.info("---------");
     }
 }
